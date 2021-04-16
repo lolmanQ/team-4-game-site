@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="" content="">
-    <title>team 4 game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | NeonNinja</title>
   </head>
-  <body>
-    <h1>hello</h1>
+  <body style="text-align: center; margin: 0px;">
+    <canvas id="unity-canvas" style="width: 100%; height: 100%; background: #231F20"></canvas>
+    <script src="Build/v0.0.13pre4.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/v0.0.13pre4.data.gz",
+        frameworkUrl: "Build/v0.0.13pre4.framework.js.gz",
+        codeUrl: "Build/v0.0.13pre4.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "3Pixel",
+        productName: "NeonNinja",
+        productVersion: "0.11",
+      });
+    </script>
   </body>
 </html>
